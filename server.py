@@ -72,8 +72,8 @@ def join(c, a):
     cthread.start()
 
 #Running the server
+print("Server Running...")
 while True:
-    print("Server Running...")
     c, a = s.accept()
     jthread = threading.Thread(target=join, args=(c, a))
     jthread.daemon = True
